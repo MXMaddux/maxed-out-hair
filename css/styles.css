@@ -296,8 +296,7 @@ Hero
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgb(152, 188, 41, 0.7), rgba(0,0,0,0.9)),
-    url("../img/main_mane.jpg") center/cover no-repeat;
+  background: linear-gradient(rgb(0,0,0), rgb(152, 188, 41));
 }
 .hero-banner {
   text-align: center;
@@ -316,32 +315,32 @@ Hero
   color: var(--clr-white);
   border-color: var(--clr-white);
 } */
-/* @media screen and (min-width: 768px){
+@media screen and (min-width: 576px){
   .hero {
-    background: linear-gradient(rgb(152, 188, 41, 0.7), rgba(0,0,0,0.9)),
+    background: linear-gradient(rgba(0,0,0,0.9), rgb(152, 188, 41, 0.7)),
     url("../img/main_mane.jpg") center/cover no-repeat;
   }
   .hero-banner {
     padding: 0;
   }
-} */
+}
 /*
 ====================
-Skinny
+Dirt
 ====================
  */
- .skinny-img,
-.skinny-info {
+ .dirt-img,
+.dirt-info {
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 992px){
-  .skinny-center {
+  .dirt-center {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .skinny-img,
-  .skinny-info {
+  .dirt-img,
+  .dirt-info {
     flex: 0 0 calc(50% - 2rem);
     margin-bottom: 0;
     align-self: center;
@@ -349,7 +348,7 @@ Skinny
 }
 
 @media screen and (min-width:1170px) {
-  .skinny-img::before {
+  .dirt-img::before {
     content: "";
     position: absolute;
     border: 0.5rem solid var(--clr-primary-5);
@@ -359,10 +358,10 @@ Skinny
     top: -1.5rem;
     left: -1.5rem;
   }
-  .skinny-img {
+  .dirt-img {
     position: relative;
   }
-  .skinny-photo {
+  .dirt-photo {
     position: relative;
   }
 }
@@ -387,6 +386,12 @@ Contact
   font-size: 2rem;
   margin-bottom: 1.5rem;
   width: 50px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.contact-icon:hover {
+  background: var(--clr-primary-1);
+  color: var(--clr-primary-5);
 }
 .contact-text {
   max-width: 20rem;
@@ -400,6 +405,14 @@ Contact
  .email-link:hover {
   color: var(--clr-primary-5);
  }
+ .email-icon-link {
+  color: var(--clr-grey-1);
+  cursor: pointer;
+  transition: var(--transition);
+ }
+ /* .email-icon-link:hover {
+  background: var(--clr-primary-2);
+ } */
 
  @media screen and (min-width: 576px) {
   .contact-center {
