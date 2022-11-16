@@ -185,7 +185,7 @@ Navbar
 ====================
  */
  .nav-logo {
-  height: 70px;
+  width: 20rem;
 }
 .navbar {
   position: fixed;
